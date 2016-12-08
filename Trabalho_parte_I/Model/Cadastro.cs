@@ -13,6 +13,12 @@ namespace Trabalho_parte_I
 			set;
 		}
 
+		public string saldo_inicial
+		{
+			get;
+			set;
+		}
+
 		public string Nome
 		{
 			get;

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Trabalho_parte_I.Cadastro_View">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="Center" Margin="0,0,0,0">
+			<Label Text="Cadastro de Usuário:" x:Name="txtLabel" HorizontalTextAlignment="Center" Margin="0,0,0,20" />
+			<Entry Placeholder="Nome" x:Name="txtNome_Usuario" Keyboard="Text" Text="{Binding Cadastro.Nome, Mode=TwoWay}" />
+			<Entry Placeholder="Email" x:Name="txtEmail" Keyboard="Email" Text="{Binding Cadastro.Email, Mode=TwoWay}" />
+			<Picker Title="Sexo" x:Name="txtSexo" SelectedIndex="{Binding Cadastro.Sexo, Mode=TwoWay}" />
+			<StackLayout Orientation="Horizontal">
+				<Label Text="Dt. de Nasc:" x:Name="txtLabel1" HorizontalTextAlignment="Center" Margin="5,5,2,0" />
+				<DatePicker Format="D" x:Name="txtData_Nascimento" Date="{Binding Cadastro.Data_Nascimento, Mode=TwoWay}" />
+			</StackLayout>
+			<Entry Placeholder="Telefone" x:Name="txtTelefone" Keyboard="Telephone" Text="{Binding Cadastro.Telefone, Mode=TwoWay}" />
+			<Entry Placeholder="Senha" x:Name="txtSenha" IsPassword="true" Text="{Binding Cadastro.Senha, Mode=TwoWay}" />
+			<StackLayout Orientation="Horizontal">
+				<Button Margin="50,10,0,0" BorderWidth="1" WidthRequest="100" Command="{Binding Voltar}" Image="Voltar" />
+				<Button Margin="60,10,0,0" BorderWidth="1" WidthRequest="100" Command="{Binding Salvar}" Image="Salvar" />
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

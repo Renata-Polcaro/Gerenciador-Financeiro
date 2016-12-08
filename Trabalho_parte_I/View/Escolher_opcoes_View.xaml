@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Trabalho_parte_I.Escolher_opcoes_View">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="Center" Margin="0,0,0,0">
+			<Label Text = "Escolha a opção desejada:" x:Name="txtLabel" HorizontalTextAlignment = "Center"/>
+			<StackLayout Orientation = "Horizontal" Margin = "80,20,0,0">
+			<Button Command="{Binding Lucros}" BorderWidth = "1" HorizontalOptions= "Center" WidthRequest="100" HeightRequest="100" Image="Adicionar_Lucro"/>
+			<Button Command="{Binding Dividas}" BorderWidth = "1" HorizontalOptions= "Center" WidthRequest="100" HeightRequest="100" Image="Adicionar_Despesa"/>
+			</StackLayout>
+			<StackLayout Orientation = "Horizontal" Margin = "80,0,0,0">
+			<Button Command="{Binding Cartao}" BorderWidth = "1" HorizontalOptions= "Center" WidthRequest="100" HeightRequest="100" Image="Cartao"/>
+			<Button Command="{Binding Relatorios}" BorderWidth = "1" HorizontalOptions= "Center" WidthRequest="100" HeightRequest="100" Image="relatorio"/>
+			</StackLayout>
+			<Button Command="{Binding Configuracoes}" BorderWidth = "1" HorizontalOptions= "Center" WidthRequest="100" HeightRequest="100" Margin = "0,0,0,0" Image="Configuracoes"/>
+			<Button  Margin="0,50,0,0" BorderWidth="1"  WidthRequest="100" HorizontalOptions="Center" Command="{Binding Voltar}" Image="Voltar"/>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

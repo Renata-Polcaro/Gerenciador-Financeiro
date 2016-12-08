@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Trabalho_parte_I.Adicionar_Dividas_View">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="Center" Margin="0,0,0,0">
+			<Label Text = "Cadastro de Dívidas:" x:Name="txtLabel" HorizontalTextAlignment = "Center" Margin="0,0,0,20"/>
+			<Entry Placeholder="Nome" x:Name="txtNome_divida" Keyboard = "Text" Text="{Binding Cadastro.Nome_divida, Mode=TwoWay}" />
+			<Entry Placeholder="Valor" x:Name="txtValor_divida" Keyboard = "Text" Text="{Binding Cadastro.Valor_divida, Mode=TwoWay}" />
+			<DatePicker Format = "D" x:Name="txtData_divida" MinimumDate="12,01,2016" Date="{Binding Cadastro.Data_divida, Mode=TwoWay}" />
+			<Picker Title="Categoria da Dívida" x:Name="txtCategoria_divida" SelectedIndex="{Binding Cadastro.Categoria_divida, Mode=TwoWay}"/>
+			<StackLayout Orientation="Horizontal">
+			<Label Text="A dívida foi paga?" Margin="5,0,0,0" x:Name="txtdivida_paga"/>
+			<Switch x:Name="txtswitcher"  Margin="100,0,0,0" IsToggled="{Binding Cadastro.switcher, Mode=TwoWay}" />
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+			<Button Margin="50,10,0,0" BorderWidth="1" WidthRequest="100" Command="{Binding Voltar}" Image="Voltar"/>
+			<Button Margin="60,10,0,0" BorderWidth="1" WidthRequest="100" Command="{Binding Salvar}" Image="Salvar"/>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

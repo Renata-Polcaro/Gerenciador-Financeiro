@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Trabalho_parte_I.Adicionar_lucros_View">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="Center" Margin="0,0,0,65">
+			<Label Text = "Cadastro de lucros:" x:Name="txtLabel" HorizontalTextAlignment = "Center" Margin="0,0,0,20"/>
+			<Entry Placeholder="Nome" x:Name="txtNome_lucro" Keyboard = "Text" Text="{Binding Cadastro.Nome_lucro, Mode=TwoWay}" />
+			<Entry Placeholder="Valor" x:Name="txtValor_lucro" Keyboard = "Text" Text="{Binding Cadastro.Valor_lucro, Mode=TwoWay}" />
+			<DatePicker Format = "D" x:Name="txtData_lucro" MinimumDate="12,01,2016" Date="{Binding Cadastro.Data_lucro, Mode=TwoWay}" />
+			<StackLayout Orientation="Horizontal">
+			<Button Margin="50,10,0,0" BorderWidth="1" WidthRequest="100" Command="{Binding Voltar}" Image="Voltar"/>
+			<Button Margin="60,10,0,0" BorderWidth="1" WidthRequest="100" Command="{Binding Salvar}" Image="Salvar"/>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

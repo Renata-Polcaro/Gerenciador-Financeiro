@@ -1,0 +1,1 @@
+﻿using System; using SQLite;  namespace Trabalho_parte_I { 	public interface ISQLite 	{ 		SQLiteConnection GetConnection(); 	} }

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Trabalho_parte_I.Configuracoes_View">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="Center" Margin="0,0,0,65">
+			<Label Text = "Configurações:" x:Name="txtLabel" HorizontalTextAlignment = "Center"/>
+			<StackLayout Orientation = "Horizontal" Margin = "10,20,0,0">
+			<Label Text="Backup automáico?" x:Name="txtBackup" />
+			<Switch x:Name="txtbkp"  IsToggled="{Binding Configuracoes.bkp, Mode=TwoWay}" Margin = "85,0,0,0"/>
+			</StackLayout>
+			<StackLayout Orientation = "Horizontal" Margin = "10,0,0,0">
+			<Label Text="Ativar Touch ID?" x:Name="txtTouchID" />
+			<Switch x:Name="txttouch"  IsToggled="{Binding Configuracoes.touch, Mode=TwoWay}" Margin = "110,0,0,0" />
+			</StackLayout>	
+			<StackLayout Orientation = "Horizontal" Margin = "10,0,0,0">
+			<Label Text="Habilitar busca inteligente?" x:Name="txtbusca_inteligente" />
+			<Switch x:Name="txtbusca" IsToggled="{Binding Configuracoes.busca, Mode=TwoWay}" Margin = "27,0,0,0"/>
+			</StackLayout>
+			<StackLayout Orientation="Horizontal">
+			<Button Margin="50,10,0,0" BorderWidth="1" WidthRequest="100" Command="{Binding Voltar}" Image="Voltar"/>
+			<Button Margin="60,10,0,0" BorderWidth="1" WidthRequest="100" Command="{Binding Salvar}" Image="Salvar"/>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Trabalho_parte_I.Adicionar_cartao_View">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="Center" Margin="0,0,0,40">
+			<Label Text = "Cadastro de Cartões:" x:Name="txtLabel" HorizontalTextAlignment = "Center" Margin="0,0,0,20"/>
+			<Entry Placeholder = "Número do Cartão" x:Name="txtNumero" Text="{Binding Cadastro.Numero, Mode=TwoWay}"/>
+			<Picker Title="Bandeira do Cartão" x:Name="txtBandeira"  SelectedIndex="{Binding Cadastro.Bandeira, Mode=TwoWay}" />
+			<StackLayout Orientation="Horizontal">
+			<Label Text="Dt. de Exp.:" x:Name="txtLabel1" HorizontalTextAlignment = "Center" Margin="5,5,9,0"/>
+			<DatePicker Format = "D" x:Name="txtData_Expedicao" Date="{Binding Cadastro.Data_Expedicao, Mode=TwoWay}"/>
+			</StackLayout>
+			<Entry Placeholder = "Código de 3 dígitos localizado atrás do cartão" x:Name="txtCodigo" Text="{Binding Cadastro.Codigo, Mode=TwoWay}"/>
+			<StackLayout Orientation="Horizontal">
+			<Button Margin="50,10,0,0" BorderWidth="1" WidthRequest="100" Command="{Binding Voltar}" Image="Voltar"/>
+			<Button Margin="60,10,0,0" BorderWidth="1" WidthRequest="100" Command="{Binding Salvar}" Image="Salvar"/>
+			</StackLayout>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
